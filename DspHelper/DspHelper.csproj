@@ -1,0 +1,145 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <Resource Include="Resources\DspHelper_Icon.ico" />
+    <Resource Include="Resources\DspItems\Buildings\Icon_Accumulator.png" />
+    <Resource Include="Resources\DspItems\Buildings\Icon_Arc_Smelter.png" />
+    <Resource Include="Resources\DspItems\Buildings\Icon_Artificial_Star.png" />
+    <Resource Include="Resources\DspItems\Buildings\Icon_Assembling_Machine_Mk.I.png" />
+    <Resource Include="Resources\DspItems\Buildings\Icon_Assembling_Machine_Mk.II.png" />
+    <Resource Include="Resources\DspItems\Buildings\Icon_Assembling_Machine_Mk.III.png" />
+    <Resource Include="Resources\DspItems\Buildings\Icon_Chemical_Plant.png" />
+    <Resource Include="Resources\DspItems\Buildings\Icon_Conveyor_Belt_Mk.I.png" />
+    <Resource Include="Resources\DspItems\Buildings\Icon_Conveyor_Belt_Mk.II.png" />
+    <Resource Include="Resources\DspItems\Buildings\Icon_Conveyor_Belt_Mk.III.png" />
+    <Resource Include="Resources\DspItems\Buildings\Icon_EM-Rail_Ejector.png" />
+    <Resource Include="Resources\DspItems\Buildings\Icon_Energy_Exchanger.png" />
+    <Resource Include="Resources\DspItems\Buildings\Icon_Fractionator.png" />
+    <Resource Include="Resources\DspItems\Buildings\Icon_Full_Accumulator.png" />
+    <Resource Include="Resources\DspItems\Buildings\Icon_Interstellar_Logistics_Station.png" />
+    <Resource Include="Resources\DspItems\Buildings\Icon_Matrix_Lab.png" />
+    <Resource Include="Resources\DspItems\Buildings\Icon_Miniature_Particle_Collider.png" />
+    <Resource Include="Resources\DspItems\Buildings\Icon_Mining_Machine.png" />
+    <Resource Include="Resources\DspItems\Buildings\Icon_Mini_Fusion_Power_Plant.png" />
+    <Resource Include="Resources\DspItems\Buildings\Icon_Oil_Extractor.png" />
+    <Resource Include="Resources\DspItems\Buildings\Icon_Oil_Refinery.png" />
+    <Resource Include="Resources\DspItems\Buildings\Icon_Orbital_Collector.png" />
+    <Resource Include="Resources\DspItems\Buildings\Icon_Planetary_Logistics_Station.png" />
+    <Resource Include="Resources\DspItems\Buildings\Icon_Plane_Smelter.png" />
+    <Resource Include="Resources\DspItems\Buildings\Icon_Ray_Receiver.png" />
+    <Resource Include="Resources\DspItems\Buildings\Icon_Satellite_Substation.png" />
+    <Resource Include="Resources\DspItems\Buildings\Icon_Solar_Panel.png" />
+    <Resource Include="Resources\DspItems\Buildings\Icon_Sorter_Mk.I.png" />
+    <Resource Include="Resources\DspItems\Buildings\Icon_Sorter_Mk.II.png" />
+    <Resource Include="Resources\DspItems\Buildings\Icon_Sorter_Mk.III.png" />
+    <Resource Include="Resources\DspItems\Buildings\Icon_Splitter.png" />
+    <Resource Include="Resources\DspItems\Buildings\Icon_Storage_Mk.I.png" />
+    <Resource Include="Resources\DspItems\Buildings\Icon_Storage_Mk.II.png" />
+    <Resource Include="Resources\DspItems\Buildings\Icon_Storage_Tank.png" />
+    <Resource Include="Resources\DspItems\Buildings\Icon_Tesla_Tower.png" />
+    <Resource Include="Resources\DspItems\Buildings\Icon_Thermal_Power_Plant.png" />
+    <Resource Include="Resources\DspItems\Buildings\Icon_Vertical_Launching_Silo.png" />
+    <Resource Include="Resources\DspItems\Buildings\Icon_Water_Pump.png" />
+    <Resource Include="Resources\DspItems\Buildings\Icon_Wind_Turbine.png" />
+    <Resource Include="Resources\DspItems\Buildings\Icon_Wireless_Power_Tower.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Annihilation_Constraint_Sphere.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Antimatter.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Antimatter_Fuel_Rod.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Carbon_Nanotube.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Casimir_Crystal.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Circuit_Board.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Coal.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Copper_Ingot.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Copper_Ore.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Critical_Photon.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Crude_Oil.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Crystal_Silicon.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Deuterium.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Deuteron_Fuel_Rod.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Diamond.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Dyson_Sphere_Component.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Electric_Motor.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Electromagnetic_Matrix.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Electromagnetic_Turbine.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Energetic_Graphite.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Energy_Matrix.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Fire_Ice.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Foundation.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Fractal_Silicon.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Frame_Material.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Gear.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Glass.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Graphene.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Graviton_Lens.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Gravity_Matrix.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_High-Purity_Silicon.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Hydrogen.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Hydrogen_Fuel_Rod.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Information_Matrix.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Iron_Ingot.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Iron_Ore.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Kimberlite_Ore.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Log.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Logistics_Drone.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Logistics_Vessel.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Magnet.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Magnetic_Coil.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Microcrystalline_Component.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Optical_Grating_Crystal.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Organic_Crystal.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Particle_Broadband.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Particle_Container.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Photon_Combiner.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Plane_Filter.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Plant_Fuel.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Plasma_Exciter.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Plastic.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Prism.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Processor.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Quantum_Chip.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Refined_Oil.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Reinforced_Thruster.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Silicon_Ore.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Small_Carrier_Rocket.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Solar_Sail.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Space_Warper.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Spiniform_Stalagmite_Crystal.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Steel.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Stone.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Stone_Brick.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Strange_Matter.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Structure_Matrix.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Sulfuric_Acid.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Super-Magnetic_Ring.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Thruster.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Titanium_Alloy.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Titanium_Crystal.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Titanium_Glass.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Titanium_Ingot.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Titanium_Ore.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Unipolar_Magnet.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Universe_Matrix.png" />
+    <Resource Include="Resources\DspItems\Components\Icon_Water.png" />
+    <Resource Include="Resources\recipe_arrow.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Helpers\" />
+    <Folder Include="Models\" />
+    <Folder Include="ViewModels\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FontAwesome.Sharp" Version="5.15.3" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.1" />
+    <PackageReference Include="Microsoft.Toolkit.Mvvm" Version="7.0.2" />
+  </ItemGroup>
+
+</Project>
