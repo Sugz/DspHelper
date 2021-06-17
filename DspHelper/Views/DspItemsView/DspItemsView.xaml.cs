@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace DspHelper.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for DspItemsView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class DspItemsView : UserControl
     {
-        public MainWindow()
+        public DspItemsView()
         {
             InitializeComponent();
         }

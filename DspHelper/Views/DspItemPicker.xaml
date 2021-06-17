@@ -1,0 +1,68 @@
+﻿<Window x:Class="DspHelper.Views.DspItemPicker"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="clr-namespace:DspHelper.Views.Controls"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:DspHelper.Views"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        x:Name="dspItemPicker"
+        Title="Pick an item"
+        Background="{StaticResource Background}"
+        ResizeMode="NoResize"
+        ShowInTaskbar="False"
+        SizeToContent="WidthAndHeight"
+        WindowStartupLocation="CenterOwner"
+        WindowStyle="ToolWindow"
+        mc:Ignorable="d">
+
+    <StackPanel>
+        <StackPanel x:Name="componentsView"
+                    Margin="0,0,0,10">
+            <TextBlock FontFamily="Segoe UI Semibold"
+                       FontSize="14"
+                       FontWeight="Normal"
+                       Foreground="{StaticResource Accent}"
+                       Text="Components" />
+            <Border Height="1"
+                    Margin="0,5,0,10"
+                    Background="{StaticResource Foreground}" />
+            <controls:DspItemSelectorControl Margin="1"
+                                             CellSize="40"
+                                             SelectItemCommand="{Binding PickItemCommand, ElementName=dspItemPicker}"
+                                             Type="Component" />
+        </StackPanel>
+
+        <StackPanel x:Name="buildingsView"
+                    Margin="0,0,0,10">
+            <TextBlock FontFamily="Segoe UI Semibold"
+                       FontSize="14"
+                       FontWeight="Normal"
+                       Foreground="{StaticResource Accent}"
+                       Text="Buildings" />
+            <Border Height="1"
+                    Margin="0,5,0,10"
+                    Background="{StaticResource Foreground}" />
+            <controls:DspItemSelectorControl Margin="1"
+                                             CellSize="40"
+                                             SelectItemCommand="{Binding PickItemCommand, ElementName=dspItemPicker}"
+                                             Type="Building" />
+        </StackPanel>
+
+        <StackPanel x:Name="sourcesView">
+            <TextBlock FontFamily="Segoe UI Semibold"
+                       FontSize="14"
+                       FontWeight="Normal"
+                       Foreground="{StaticResource Accent}"
+                       Text="Natural Sources" />
+            <Border Height="1"
+                    Margin="0,5,0,10"
+                    Background="{StaticResource Foreground}" />
+            <controls:DspItemSelectorControl Margin="1"
+                                             CellSize="40"
+                                             SelectItemCommand="{Binding PickItemCommand, ElementName=dspItemPicker}"
+                                             Type="Source" />
+        </StackPanel>
+
+    </StackPanel>
+
+</Window>
