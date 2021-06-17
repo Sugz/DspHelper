@@ -6,7 +6,6 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
-
   <ItemGroup>
     <Resource Include="Resources\DspHelper_Icon.ico" />
     <Resource Include="Resources\DspItems\Buildings\Icon_Accumulator.png" />
@@ -127,13 +126,25 @@
     <Resource Include="Resources\DspItems\Components\Icon_Unipolar_Magnet.png" />
     <Resource Include="Resources\DspItems\Components\Icon_Universe_Matrix.png" />
     <Resource Include="Resources\DspItems\Components\Icon_Water.png" />
+    <Resource Include="Resources\DspItems\NaturalSources\Icon_Coal_Vein.png" />
+    <Resource Include="Resources\DspItems\NaturalSources\Icon_Copper_Vein.png" />
+    <Resource Include="Resources\DspItems\NaturalSources\Icon_Crude_Oil_Seep.png" />
+    <Resource Include="Resources\DspItems\NaturalSources\Icon_Fire_Ice_Vein.png" />
+    <Resource Include="Resources\DspItems\NaturalSources\Icon_Fractal_Silicon_Vein.png" />
+    <Resource Include="Resources\DspItems\NaturalSources\Icon_Gas_Giant.png" />
+    <Resource Include="Resources\DspItems\NaturalSources\Icon_Ice_Giant.png" />
+    <Resource Include="Resources\DspItems\NaturalSources\Icon_Iron_Vein.png" />
+    <Resource Include="Resources\DspItems\NaturalSources\Icon_Kimberlite_Vein.png" />
+    <Resource Include="Resources\DspItems\NaturalSources\Icon_Optical_Grating_Rock.png" />
+    <Resource Include="Resources\DspItems\NaturalSources\Icon_Organic_Crystal_Vein.png" />
+    <Resource Include="Resources\DspItems\NaturalSources\Icon_Silicon_Vein.png" />
+    <Resource Include="Resources\DspItems\NaturalSources\Icon_Spiniform_Stalagmite_Crystal_Vein.png" />
+    <Resource Include="Resources\DspItems\NaturalSources\Icon_Stone_Vein.png" />
+    <Resource Include="Resources\DspItems\NaturalSources\Icon_Sulfuric_Acid_Ocean.png" />
+    <Resource Include="Resources\DspItems\NaturalSources\Icon_Titanium_Vein.png" />
+    <Resource Include="Resources\DspItems\NaturalSources\Icon_Unipolar_Magnet_Vein.png" />
+    <Resource Include="Resources\DspItems\NaturalSources\Icon_Water_Ocean.png" />
     <Resource Include="Resources\recipe_arrow.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Helpers\" />
-    <Folder Include="Models\" />
-    <Folder Include="ViewModels\" />
   </ItemGroup>
 
   <ItemGroup>
