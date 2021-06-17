@@ -1,0 +1,504 @@
+﻿<Window x:Class="DspDataGenerator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:DspDataGenerator"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="MainWindow"
+        Background="#FF1E1E1E"
+        Foreground="#FFCBCBCB"
+        SizeToContent="WidthAndHeight"
+        mc:Ignorable="d">
+
+    <Window.Resources>
+        <Style TargetType="{x:Type Image}">
+            <Setter Property="Width" Value="50" />
+            <Setter Property="Height" Value="50" />
+            <Setter Property="RenderOptions.BitmapScalingMode" Value="Fant" />
+            <Setter Property="Stretch" Value="Uniform" />
+        </Style>
+    </Window.Resources>
+
+    <StackPanel>
+        <TextBlock Margin="0,0,0,5"
+                   FontSize="20"
+                   Text="Components" />
+        <Grid Name="components_grid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Image Source="/Resources/DspItems/Components/Icon_Iron_Ore.png" />
+            <Image Grid.Column="1"
+                   Source="/Resources/DspItems/Components/Icon_Copper_Ore.png" />
+            <Image Grid.Column="2"
+                   Source="/Resources/DspItems/Components/Icon_Stone.png" />
+            <Image Grid.Column="3"
+                   Source="/Resources/DspItems/Components/Icon_Coal.png" />
+            <Image Grid.Column="4"
+                   Source="/Resources/DspItems/Components/Icon_Silicon_Ore.png" />
+            <Image Grid.Column="5"
+                   Source="/Resources/DspItems/Components/Icon_Titanium_Ore.png" />
+            <Image Grid.Column="6"
+                   Source="/Resources/DspItems/Components/Icon_Water.png" />
+            <Image Grid.Column="7"
+                   Source="/Resources/DspItems/Components/Icon_Crude_Oil.png" />
+            <Image Grid.Column="8"
+                   Source="/Resources/DspItems/Components/Icon_Hydrogen.png" />
+            <Image Grid.Column="9"
+                   Source="/Resources/DspItems/Components/Icon_Deuterium.png" />
+            <Image Grid.Column="10"
+                   Source="/Resources/DspItems/Components/Icon_Antimatter.png" />
+            <Image Grid.Column="11"
+                   Source="/Resources/DspItems/Components/Icon_Kimberlite_Ore.png" />
+
+            <Image Grid.Row="1"
+                   Source="/Resources/DspItems/Components/Icon_Iron_Ingot.png" />
+            <Image Grid.Row="1"
+                   Grid.Column="1"
+                   Source="/Resources/DspItems/Components/Icon_Copper_Ingot.png" />
+            <Image Grid.Row="1"
+                   Grid.Column="2"
+                   Source="/Resources/DspItems/Components/Icon_Stone_Brick.png" />
+            <Image Grid.Row="1"
+                   Grid.Column="3"
+                   Source="/Resources/DspItems/Components/Icon_Energetic_Graphite.png" />
+            <Image Grid.Row="1"
+                   Grid.Column="4"
+                   Source="/Resources/DspItems/Components/Icon_High-Purity_Silicon.png" />
+            <Image Grid.Row="1"
+                   Grid.Column="5"
+                   Source="/Resources/DspItems/Components/Icon_Titanium_Ingot.png" />
+            <Image Grid.Row="1"
+                   Grid.Column="6"
+                   Source="/Resources/DspItems/Components/Icon_Sulfuric_Acid.png" />
+            <Image Grid.Row="1"
+                   Grid.Column="7"
+                   Source="/Resources/DspItems/Components/Icon_Refined_Oil.png" />
+            <Image Grid.Row="1"
+                   Grid.Column="8"
+                   Source="/Resources/DspItems/Components/Icon_Hydrogen_Fuel_Rod.png" />
+            <Image Grid.Row="1"
+                   Grid.Column="9"
+                   Source="/Resources/DspItems/Components/Icon_Deuteron_Fuel_Rod.png" />
+            <Image Grid.Row="1"
+                   Grid.Column="10"
+                   Source="/Resources/DspItems/Components/Icon_Antimatter_Fuel_Rod.png" />
+            <Image Grid.Row="1"
+                   Grid.Column="11"
+                   Source="/Resources/DspItems/Components/Icon_Fractal_Silicon.png" />
+
+            <Image Grid.Row="2"
+                   Grid.Column="0"
+                   Source="/Resources/DspItems/Components/Icon_Magnet.png" />
+            <Image Grid.Row="2"
+                   Grid.Column="1"
+                   Source="/Resources/DspItems/Components/Icon_Magnetic_Coil.png" />
+            <Image Grid.Row="2"
+                   Grid.Column="2"
+                   Source="/Resources/DspItems/Components/Icon_Glass.png" />
+            <Image Grid.Row="2"
+                   Grid.Column="3"
+                   Source="/Resources/DspItems/Components/Icon_Diamond.png" />
+            <Image Grid.Row="2"
+                   Grid.Column="4"
+                   Source="/Resources/DspItems/Components/Icon_Crystal_Silicon.png" />
+            <Image Grid.Row="2"
+                   Grid.Column="5"
+                   Source="/Resources/DspItems/Components/Icon_Titanium_Alloy.png" />
+            <Image Grid.Row="2"
+                   Grid.Column="6"
+                   Source="/Resources/DspItems/Components/Icon_Fire_Ice.png" />
+            <Image Grid.Row="2"
+                   Grid.Column="7"
+                   Source="/Resources/DspItems/Components/Icon_Plastic.png" />
+            <Image Grid.Row="2"
+                   Grid.Column="8"
+                   Source="/Resources/DspItems/Components/Icon_Organic_Crystal.png" />
+            <Image Grid.Row="2"
+                   Grid.Column="9"
+                   Source="/Resources/DspItems/Components/Icon_Graphene.png" />
+            <Image Grid.Row="2"
+                   Grid.Column="10"
+                   Source="/Resources/DspItems/Components/Icon_Thruster.png" />
+            <Image Grid.Row="2"
+                   Grid.Column="11"
+                   Source="/Resources/DspItems/Components/Icon_Optical_Grating_Crystal.png" />
+
+            <Image Grid.Row="3"
+                   Grid.Column="0"
+                   Source="/Resources/DspItems/Components/Icon_Steel.png" />
+            <Image Grid.Row="3"
+                   Grid.Column="1"
+                   Source="/Resources/DspItems/Components/Icon_Circuit_Board.png" />
+            <Image Grid.Row="3"
+                   Grid.Column="2"
+                   Source="/Resources/DspItems/Components/Icon_Prism.png" />
+            <Image Grid.Row="3"
+                   Grid.Column="3"
+                   Source="/Resources/DspItems/Components/Icon_Electric_Motor.png" />
+            <Image Grid.Row="3"
+                   Grid.Column="4"
+                   Source="/Resources/DspItems/Components/Icon_Microcrystalline_Component.png" />
+            <Image Grid.Row="3"
+                   Grid.Column="6"
+                   Source="/Resources/DspItems/Components/Icon_Casimir_Crystal.png" />
+            <Image Grid.Row="3"
+                   Grid.Column="7"
+                   Source="/Resources/DspItems/Components/Icon_Strange_Matter.png" />
+            <Image Grid.Row="3"
+                   Grid.Column="8"
+                   Source="/Resources/DspItems/Components/Icon_Titanium_Crystal.png" />
+            <Image Grid.Row="3"
+                   Grid.Column="9"
+                   Source="/Resources/DspItems/Components/Icon_Carbon_Nanotube.png" />
+            <Image Grid.Row="3"
+                   Grid.Column="10"
+                   Source="/Resources/DspItems/Components/Icon_Reinforced_Thruster.png" />
+            <Image Grid.Row="3"
+                   Grid.Column="11"
+                   Source="/Resources/DspItems/Components/Icon_Spiniform_Stalagmite_Crystal.png" />
+
+            <Image Grid.Row="4"
+                   Grid.Column="0"
+                   Source="/Resources/DspItems/Components/Icon_Gear.png" />
+            <Image Grid.Row="4"
+                   Grid.Column="1"
+                   Source="/Resources/DspItems/Components/Icon_Plasma_Exciter.png" />
+            <Image Grid.Row="4"
+                   Grid.Column="2"
+                   Source="/Resources/DspItems/Components/Icon_Photon_Combiner.png" />
+            <Image Grid.Row="4"
+                   Grid.Column="3"
+                   Source="/Resources/DspItems/Components/Icon_Electromagnetic_Turbine.png" />
+            <Image Grid.Row="4"
+                   Grid.Column="4"
+                   Source="/Resources/DspItems/Components/Icon_Processor.png" />
+            <Image Grid.Row="4"
+                   Grid.Column="7"
+                   Source="/Resources/DspItems/Components/Icon_Annihilation_Constraint_Sphere.png" />
+            <Image Grid.Row="4"
+                   Grid.Column="8"
+                   Source="/Resources/DspItems/Components/Icon_Titanium_Glass.png" />
+            <Image Grid.Row="4"
+                   Grid.Column="9"
+                   Source="/Resources/DspItems/Components/Icon_Particle_Broadband.png" />
+            <Image Grid.Row="4"
+                   Grid.Column="10"
+                   Source="/Resources/DspItems/Components/Icon_Logistics_Drone.png" />
+            <Image Grid.Row="4"
+                   Grid.Column="11"
+                   Source="/Resources/DspItems/Components/Icon_Unipolar_Magnet.png" />
+
+            <Image Grid.Row="5"
+                   Grid.Column="0"
+                   Source="/Resources/DspItems/Components/Icon_Foundation.png" />
+            <Image Grid.Row="5"
+                   Grid.Column="1"
+                   Source="/Resources/DspItems/Components/Icon_Critical_Photon.png" />
+            <Image Grid.Row="5"
+                   Grid.Column="2"
+                   Source="/Resources/DspItems/Components/Icon_Particle_Container.png" />
+            <Image Grid.Row="5"
+                   Grid.Column="3"
+                   Source="/Resources/DspItems/Components/Icon_Super-Magnetic_Ring.png" />
+            <Image Grid.Row="5"
+                   Grid.Column="4"
+                   Source="/Resources/DspItems/Components/Icon_Graviton_Lens.png" />
+            <Image Grid.Row="5"
+                   Grid.Column="7"
+                   Source="/Resources/DspItems/Components/Icon_Space_Warper.png" />
+            <Image Grid.Row="5"
+                   Grid.Column="8"
+                   Source="/Resources/DspItems/Components/Icon_Plane_Filter.png" />
+            <Image Grid.Row="5"
+                   Grid.Column="9"
+                   Source="/Resources/DspItems/Components/Icon_Quantum_Chip.png" />
+            <Image Grid.Row="5"
+                   Grid.Column="10"
+                   Source="/Resources/DspItems/Components/Icon_Logistics_Vessel.png" />
+            <Image Grid.Row="5"
+                   Grid.Column="11"
+                   Source="/Resources/DspItems/Components/Icon_Log.png" />
+
+            <Image Grid.Row="6"
+                   Grid.Column="0"
+                   Source="/Resources/DspItems/Components/Icon_Electromagnetic_Matrix.png" />
+            <Image Grid.Row="6"
+                   Grid.Column="1"
+                   Source="/Resources/DspItems/Components/Icon_Energy_Matrix.png" />
+            <Image Grid.Row="6"
+                   Grid.Column="2"
+                   Source="/Resources/DspItems/Components/Icon_Structure_Matrix.png" />
+            <Image Grid.Row="6"
+                   Grid.Column="3"
+                   Source="/Resources/DspItems/Components/Icon_Information_Matrix.png" />
+            <Image Grid.Row="6"
+                   Grid.Column="4"
+                   Source="/Resources/DspItems/Components/Icon_Gravity_Matrix.png" />
+            <Image Grid.Row="6"
+                   Grid.Column="5"
+                   Source="/Resources/DspItems/Components/Icon_Universe_Matrix.png" />
+            <Image Grid.Row="6"
+                   Grid.Column="7"
+                   Source="/Resources/DspItems/Components/Icon_Solar_Sail.png" />
+            <Image Grid.Row="6"
+                   Grid.Column="8"
+                   Source="/Resources/DspItems/Components/Icon_Frame_Material.png" />
+            <Image Grid.Row="6"
+                   Grid.Column="9"
+                   Source="/Resources/DspItems/Components/Icon_Dyson_Sphere_Component.png" />
+            <Image Grid.Row="6"
+                   Grid.Column="10"
+                   Source="/Resources/DspItems/Components/Icon_Small_Carrier_Rocket.png" />
+            <Image Grid.Row="6"
+                   Grid.Column="11"
+                   Source="/Resources/DspItems/Components/Icon_Plant_Fuel.png" />
+
+
+        </Grid>
+
+        <TextBlock Margin="0,20,0,5"
+                   FontSize="20"
+                   Text="Buildings" />
+        <Grid Name="buildings_grid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Image Source="/Resources/DspItems/Buildings/Icon_Tesla_Tower.png" />
+            <Image Grid.Column="1"
+                   Source="/Resources/DspItems/Buildings/Icon_Wireless_Power_Tower.png" />
+            <Image Grid.Column="2"
+                   Source="/Resources/DspItems/Buildings/Icon_Satellite_Substation.png" />
+            <Image Grid.Column="3"
+                   Source="/Resources/DspItems/Buildings/Icon_Wind_Turbine.png" />
+            <Image Grid.Column="4"
+                   Source="/Resources/DspItems/Buildings/Icon_Thermal_Power_Plant.png" />
+            <Image Grid.Column="5"
+                   Source="/Resources/DspItems/Buildings/Icon_Solar_Panel.png" />
+            <Image Grid.Column="6"
+                   Source="/Resources/DspItems/Buildings/Icon_Accumulator.png" />
+            <Image Grid.Column="7"
+                   Source="/Resources/DspItems/Buildings/Icon_Full_Accumulator.png" />
+            <Image Grid.Column="8"
+                   Source="/Resources/DspItems/Buildings/Icon_Ray_Receiver.png" />
+            <Image Grid.Column="9"
+                   Source="/Resources/DspItems/Buildings/Icon_Mini_Fusion_Power_Plant.png" />
+            <Image Grid.Column="10"
+                   Source="/Resources/DspItems/Buildings/Icon_Energy_Exchanger.png" />
+            <Image Grid.Column="11"
+                   Source="/Resources/DspItems/Buildings/Icon_Artificial_Star.png" />
+
+            <Image Grid.Row="1"
+                   Source="/Resources/DspItems/Buildings/Icon_Conveyor_Belt_Mk.I.png" />
+            <Image Grid.Row="1"
+                   Grid.Column="1"
+                   Source="/Resources/DspItems/Buildings/Icon_Conveyor_Belt_Mk.II.png" />
+            <Image Grid.Row="1"
+                   Grid.Column="2"
+                   Source="/Resources/DspItems/Buildings/Icon_Conveyor_Belt_Mk.III.png" />
+            <Image Grid.Row="1"
+                   Grid.Column="3"
+                   Source="/Resources/DspItems/Buildings/Icon_Splitter.png" />
+            <Image Grid.Row="1"
+                   Grid.Column="4"
+                   Source="/Resources/DspItems/Buildings/Icon_Storage_Mk.I.png" />
+            <Image Grid.Row="1"
+                   Grid.Column="5"
+                   Source="/Resources/DspItems/Buildings/Icon_Storage_Mk.II.png" />
+            <Image Grid.Row="1"
+                   Grid.Column="6"
+                   Source="/Resources/DspItems/Buildings/Icon_Storage_Tank.png" />
+            <Image Grid.Row="1"
+                   Grid.Column="7"
+                   Source="/Resources/DspItems/Buildings/Icon_EM-Rail_Ejector.png" />
+            <Image Grid.Row="1"
+                   Grid.Column="8"
+                   Source="/Resources/DspItems/Buildings/Icon_Planetary_Logistics_Station.png" />
+            <Image Grid.Row="1"
+                   Grid.Column="9"
+                   Source="/Resources/DspItems/Buildings/Icon_Miniature_Particle_Collider.png" />
+
+            <Image Grid.Row="2"
+                   Grid.Column="0"
+                   Source="/Resources/DspItems/Buildings/Icon_Sorter_Mk.I.png" />
+            <Image Grid.Row="2"
+                   Grid.Column="1"
+                   Source="/Resources/DspItems/Buildings/Icon_Sorter_Mk.II.png" />
+            <Image Grid.Row="2"
+                   Grid.Column="2"
+                   Source="/Resources/DspItems/Buildings/Icon_Sorter_Mk.III.png" />
+            <Image Grid.Row="2"
+                   Grid.Column="3"
+                   Source="/Resources/DspItems/Buildings/Icon_Mining_Machine.png" />
+            <Image Grid.Row="2"
+                   Grid.Column="4"
+                   Source="/Resources/DspItems/Buildings/Icon_Water_Pump.png" />
+            <Image Grid.Row="2"
+                   Grid.Column="5"
+                   Source="/Resources/DspItems/Buildings/Icon_Oil_Extractor.png" />
+            <Image Grid.Row="2"
+                   Grid.Column="6"
+                   Source="/Resources/DspItems/Buildings/Icon_Oil_Refinery.png" />
+            <Image Grid.Row="2"
+                   Grid.Column="7"
+                   Source="/Resources/DspItems/Buildings/Icon_Vertical_Launching_Silo.png" />
+            <Image Grid.Row="2"
+                   Grid.Column="8"
+                   Source="/Resources/DspItems/Buildings/Icon_Interstellar_Logistics_Station.png" />
+
+            <Image Grid.Row="3"
+                   Grid.Column="0"
+                   Source="/Resources/DspItems/Buildings/Icon_Assembling_Machine_Mk.I.png" />
+            <Image Grid.Row="3"
+                   Grid.Column="1"
+                   Source="/Resources/DspItems/Buildings/Icon_Assembling_Machine_Mk.II.png" />
+            <Image Grid.Row="3"
+                   Grid.Column="2"
+                   Source="/Resources/DspItems/Buildings/Icon_Assembling_Machine_Mk.III.png" />
+            <Image Grid.Row="3"
+                   Grid.Column="3"
+                   Source="/Resources/DspItems/Buildings/Icon_Arc_Smelter.png" />
+            <Image Grid.Row="3"
+                   Grid.Column="4"
+                   Source="/Resources/DspItems/Buildings/Icon_Plane_Smelter.png" />
+            <Image Grid.Row="3"
+                   Grid.Column="5"
+                   Source="/Resources/DspItems/Buildings/Icon_Fractionator.png" />
+            <Image Grid.Row="3"
+                   Grid.Column="6"
+                   Source="/Resources/DspItems/Buildings/Icon_Chemical_Plant.png" />
+            <Image Grid.Row="3"
+                   Grid.Column="7"
+                   Source="/Resources/DspItems/Buildings/Icon_Matrix_Lab.png" />
+            <Image Grid.Row="3"
+                   Grid.Column="8"
+                   Source="/Resources/DspItems/Buildings/Icon_Orbital_Collector.png" />
+
+        </Grid>
+
+        <TextBlock Margin="0,20,0,5"
+                   FontSize="20"
+                   Text="Natural Sources" />
+        <Grid Name="sources_grid"
+              HorizontalAlignment="Left">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="50" />
+
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Image Source="/Resources/DspItems/NaturalSources/Icon_Iron_Vein.png" />
+            <Image Grid.Column="1"
+                   Source="/Resources/DspItems/NaturalSources/Icon_Copper_Vein.png" />
+            <Image Grid.Column="2"
+                   Source="/Resources/DspItems/NaturalSources/Icon_Stone_Vein.png" />
+            <Image Grid.Column="3"
+                   Source="/Resources/DspItems/NaturalSources/Icon_Coal_Vein.png" />
+            <Image Grid.Column="4"
+                   Source="/Resources/DspItems/NaturalSources/Icon_Silicon_Vein.png" />
+            <Image Grid.Column="5"
+                   Source="/Resources/DspItems/NaturalSources/Icon_Titanium_Vein.png" />
+
+            <Image Grid.Row="1"
+                   Source="/Resources/DspItems/NaturalSources/Icon_Organic_Crystal_Vein.png" />
+            <Image Grid.Row="1"
+                   Grid.Column="1"
+                   Source="/Resources/DspItems/NaturalSources/Icon_Optical_Grating_Rock.png" />
+            <Image Grid.Row="1"
+                   Grid.Column="2"
+                   Source="/Resources/DspItems/NaturalSources/Icon_Fire_Ice_Vein.png" />
+            <Image Grid.Row="1"
+                   Grid.Column="3"
+                   Source="/Resources/DspItems/NaturalSources/Icon_Spiniform_Stalagmite_Crystal_Vein.png" />
+            <Image Grid.Row="1"
+                   Grid.Column="4"
+                   Source="/Resources/DspItems/NaturalSources/Icon_Fractal_Silicon_Vein.png" />
+            <Image Grid.Row="1"
+                   Grid.Column="5"
+                   Source="/Resources/DspItems/NaturalSources/Icon_Kimberlite_Vein.png" />
+
+            <Image Grid.Row="2"
+                   Grid.Column="0"
+                   Source="/Resources/DspItems/NaturalSources/Icon_Unipolar_Magnet_Vein.png" />
+            <Image Grid.Row="2"
+                   Grid.Column="1"
+                   Source="/Resources/DspItems/NaturalSources/Icon_Crude_Oil_Seep.png" />
+            <Image Grid.Row="2"
+                   Grid.Column="2"
+                   Source="/Resources/DspItems/NaturalSources/Icon_Water_Ocean.png" />
+            <Image Grid.Row="2"
+                   Grid.Column="3"
+                   Source="/Resources/DspItems/NaturalSources/Icon_Sulfuric_Acid_Ocean.png" />
+            <Image Grid.Row="2"
+                   Grid.Column="4"
+                   Source="/Resources/DspItems/NaturalSources/Icon_Gas_Giant.png" />
+            <Image Grid.Row="2"
+                   Grid.Column="5"
+                   Source="/Resources/DspItems/NaturalSources/Icon_Ice_Giant.png" />
+        </Grid>
+
+        <DockPanel Margin="0,20,0,0">
+            <Button Padding="10"
+                    VerticalAlignment="Center"
+                    Background="Transparent"
+                    BorderBrush="{x:Null}"
+                    BorderThickness="0"
+                    Click="OnButtonClick"
+                    Content="Generate"
+                    DockPanel.Dock="Right" />
+            <TextBlock x:Name="txt"
+                       Margin="15,0,0,0"
+                       HorizontalAlignment="Stretch"
+                       VerticalAlignment="Center" />
+
+        </DockPanel>
+    </StackPanel>
+</Window>
