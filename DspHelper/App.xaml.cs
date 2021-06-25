@@ -1,4 +1,5 @@
 ﻿using DspHelper.Models;
+using DspHelper.Services;
 using DspHelper.ViewModels;
 using DspHelper.ViewModels.ItemsCollection;
 using Microsoft.Extensions.DependencyInjection;
@@ -23,6 +24,15 @@ namespace DspHelper
             Services = ConfigureServices();
         }
 
+        protected override void OnExit(ExitEventArgs e)
+        {
+            DspItemsCollectionSerializer serializer = (DspItemsCollectionSerializer)Current.Services.GetService(
+                typeof(DspItemsCollectionSerializer));
+            serializer.Serialize();
+
+            base.OnExit(e);
+        }
+
         /// <summary>
         /// Gets the current <see cref="App"/> instance in use
         /// </summary>
@@ -37,7 +47,7 @@ namespace DspHelper
         {
             var services = new ServiceCollection();
 
-            // Viewmodels
+            services.AddSingleton<DspItemsCollectionSerializer>();
             services.AddSingleton<DspComponentsCollectionViewModel>();
             services.AddSingleton<DspBuildingsCollectionViewModel>();
             services.AddSingleton<DspSourcesCollectionViewModel>();

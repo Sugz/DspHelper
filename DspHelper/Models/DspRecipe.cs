@@ -1,7 +1,9 @@
-﻿using Microsoft.Toolkit.Mvvm.ComponentModel;
+﻿using DspHelper.Helpers;
+using Microsoft.Toolkit.Mvvm.ComponentModel;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,15 +12,33 @@ using System.Xml.Linq;
 
 namespace DspHelper.Models
 {
+    [TypeConverter(typeof(EnumDescriptionTypeConverter))]
+    public enum DspRecipeType
+    {
+        [Description("Time (s)")]
+        Time,
+        [Description("Chances (%)")]
+        Chances
+    }
+
     public class DspRecipe : ObservableObject
     {
-        private int _Time = 1;
+        private DspRecipeType _Type = DspRecipeType.Time;
+        private int _Value = 1;
 
-        public int Time
+
+        public DspRecipeType Type
         {
-            get => _Time;
-            set => SetProperty(ref _Time, value);
+            get => _Type;
+            set => SetProperty(ref _Type, value);
         }
+
+        public int Value
+        {
+            get => _Value;
+            set => SetProperty(ref _Value, value);
+        }
+
 
         public ObservableCollection<DspRecipeItem> Inputs { get; } = new();
         public ObservableCollection<DspRecipeItem> Outputs { get; } = new();

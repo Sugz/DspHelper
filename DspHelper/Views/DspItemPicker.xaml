@@ -21,7 +21,7 @@
             <TextBlock FontFamily="Segoe UI Semibold"
                        FontSize="14"
                        FontWeight="Normal"
-                       Foreground="{StaticResource Accent}"
+                       Foreground="{StaticResource BlueAccent}"
                        Text="Components" />
             <Border Height="1"
                     Margin="0,5,0,10"
@@ -37,7 +37,7 @@
             <TextBlock FontFamily="Segoe UI Semibold"
                        FontSize="14"
                        FontWeight="Normal"
-                       Foreground="{StaticResource Accent}"
+                       Foreground="{StaticResource BlueAccent}"
                        Text="Buildings" />
             <Border Height="1"
                     Margin="0,5,0,10"
@@ -52,7 +52,7 @@
             <TextBlock FontFamily="Segoe UI Semibold"
                        FontSize="14"
                        FontWeight="Normal"
-                       Foreground="{StaticResource Accent}"
+                       Foreground="{StaticResource BlueAccent}"
                        Text="Natural Sources" />
             <Border Height="1"
                     Margin="0,5,0,10"

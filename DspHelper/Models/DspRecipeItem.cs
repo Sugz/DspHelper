@@ -2,6 +2,13 @@
 
 namespace DspHelper.Models
 {
+    public enum DspRecipeItemType
+    {
+        Input,
+        Output,
+        Building
+    }
+
     public class DspRecipeItem : ObservableObject
     {
         private DspItem _Item;

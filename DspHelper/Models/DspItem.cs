@@ -57,9 +57,12 @@ namespace DspHelper.Models
         }
 
 
-        public void AddRecipe()
+        public DspRecipe AddRecipe()
         {
-            Recipes.Add(new DspRecipe());
+            DspRecipe recipe = new();
+            recipe.Outputs.Add(new DspRecipeItem() { Item = this });
+            Recipes.Add(recipe);
+            return recipe;
         }
 
 

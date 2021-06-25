@@ -24,5 +24,10 @@ namespace DspHelper.Views
         {
             InitializeComponent();
         }
+
+        private void OnTextBoxPreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            e.Handled = !(e.Text == "?" || int.TryParse(e.Text, out _));
+        }
     }
 }

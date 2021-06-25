@@ -3,7 +3,9 @@ using DspHelper.Views;
 using Microsoft.Toolkit.Mvvm.ComponentModel;
 using Microsoft.Toolkit.Mvvm.Input;
 using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,14 +17,13 @@ namespace DspHelper.ViewModels
         private DspItem _Item;
         private int _Column;
         private int _Row;
-        private DspItem _EditingItem; 
+        private DspItem _EditingItem;
+        private DspRecipe _EditingRecipe;
 
         private RelayCommand<bool> _EditItemCommand;
         private RelayCommand _AcceptEditCommand;
         private RelayCommand _AddRecipeCommand;
-        private RelayCommand<DspRecipe> _AddRecipeInputCommand;
-        private RelayCommand<DspRecipe> _AddRecipeOutputCommand;
-        private RelayCommand<DspRecipe> _AddRecipeBuildingCommand;
+        private RelayCommand<object> _AddRecipeItemCommand;
         
 
         public DspItem Item
@@ -50,67 +51,103 @@ namespace DspHelper.ViewModels
         }
 
 
+        public DspRecipe EditingRecipe
+        {
+            get => _EditingRecipe;
+            set => SetProperty(ref _EditingRecipe, value);
+        }
+
+
 
         public RelayCommand<bool> EditItemCommand =>
-            _EditItemCommand ??= new((value) => EditingItem = value ? _Item.ShallowCopy() : null);
+            _EditItemCommand ??= new(EditItem);
 
         public RelayCommand AcceptEditCommand =>
             _AcceptEditCommand ??= new(AcceptEdit);
 
         public RelayCommand AddRecipeCommand => 
-            _AddRecipeCommand ??= new(Item.AddRecipe);
+            _AddRecipeCommand ??= new(() => EditingRecipe = Item.AddRecipe());
 
-        public RelayCommand<DspRecipe> AddRecipeInputCommand => 
-            _AddRecipeInputCommand ??= new((recipe) => AddRecipeItem(recipe, true));
 
-        public RelayCommand<DspRecipe> AddRecipeOutputCommand => 
-            _AddRecipeOutputCommand ??= new((recipe) => AddRecipeItem(recipe, false));
-
-        public RelayCommand<DspRecipe> AddRecipeBuildingCommand =>
-            _AddRecipeBuildingCommand ??= new(AddRecipeBuilding);
+        public RelayCommand<object> AddRecipeItemCommand =>
+            _AddRecipeItemCommand ??= new(AddRecipeItem);
 
 
 
-        public event EventHandler ItemEdited;
-        private void OnItemEdited()
+        public delegate void ItemEditedEventHandler(DspItemViewModel sender, ItemEditedEventArgs e);
+        public event ItemEditedEventHandler ItemEdited;
+        private void OnItemEdited(DspItem editedItem)
         {
-            EventHandler handler = ItemEdited;
-            handler?.Invoke(this, new EventArgs());
+            ItemEditedEventHandler handler = ItemEdited;
+            handler?.Invoke(this, new ItemEditedEventArgs(editedItem));
+        }
+
+
+
+        private void EditItem(bool value)
+        {
+            EditingItem = value ? _Item.ShallowCopy() : null;
+            if (EditingItem is not null && EditingItem.Recipes.Count > 0)
+                EditingRecipe = EditingItem.Recipes[0];
         }
 
 
         private void AcceptEdit()
         {
+            OnItemEdited(_EditingItem);
             Item = _EditingItem;
             EditingItem = null;
-            OnItemEdited();
         }
 
-        private void AddRecipeItem(DspRecipe recipe, bool isInput)
+
+        private void AddRecipeItem(object dspRecipeItemType)
         {
-            DspItemPicker itemPickerDialog = new();
-            if (itemPickerDialog.ShowDialog().Value)
+            if (dspRecipeItemType is DspRecipeItemType type)
             {
-                ICollection<DspRecipeItem> collection = isInput ? recipe.Inputs : recipe.Outputs;
-                collection.Add(new DspRecipeItem() { Item = itemPickerDialog.PickedItem.Item });
+                DspItemPicker itemPickerDialog = new();
+                itemPickerDialog.Type = type switch 
+                {
+                    DspRecipeItemType.Input => DspItemPickerType.Components | DspItemPickerType.NaturalSources,
+                    DspRecipeItemType.Output => DspItemPickerType.Components | DspItemPickerType.Buildings,
+                    _ => DspItemPickerType.Buildings,
+                };
+
+                if (itemPickerDialog.ShowDialog().Value)
+                {
+                    switch (type)
+                    {
+                        case DspRecipeItemType.Input:
+                            _EditingRecipe.Inputs.Add(new DspRecipeItem() { Item = itemPickerDialog.PickedItem.Item });
+                            break;
+                        case DspRecipeItemType.Output:
+                            _EditingRecipe.Outputs.Add(new DspRecipeItem() { Item = itemPickerDialog.PickedItem.Item });
+                            break;
+                        case DspRecipeItemType.Building:
+                        default:
+                            _EditingRecipe.Buildings.Add(itemPickerDialog.PickedItem.Item);
+                            break;
+                    }
+                }
             }
+
         }
-
-        private void AddRecipeBuilding(DspRecipe recipe)
-        {
-            DspItemPicker itemPickerDialog = new();
-            if (itemPickerDialog.ShowDialog().Value)
-                recipe.Buildings.Add(itemPickerDialog.PickedItem.Item);
-        }
-
-
-
 
         public DspItemViewModel(DspItem item, int column, int row)
         {
             Item = item;
             Column = column;
             Row = row;
+        }
+    }
+
+
+    public class ItemEditedEventArgs : EventArgs
+    {
+        public DspItem EditedItem { get; init; }
+
+        public ItemEditedEventArgs(DspItem editedItem)
+        {
+            EditedItem = editedItem;
         }
     }
 }
